@@ -7,10 +7,7 @@ Welcome to **Éclat** (French for "brilliance" or "splendor") - where luxury sho
 ## 🚀 Features
 - 🛍️ Curated selection of luxury products from top brands worldwide
 - 🔍 Advanced search with AI-powered recommendations
-- 🎨 Virtual try-on for jewelry, watches, and accessories
 - 📱 Responsive design for flawless shopping on any device
-- ⚡ Blazing fast checkout with multiple payment options
-- 🛎️ 24/7 concierge service for VIP customers
 - 📦 White-glove delivery with personalized unboxing experience
 
 ## 🛠️ Technologies Used
