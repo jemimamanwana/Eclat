@@ -2,15 +2,15 @@
 
 Welcome to **Éclat** (French for "brilliance" or "splendor") - where luxury shopping meets seamless digital experience.
 
-💎 **Note:** This is a premium e-commerce platform inspired by Amazon but focused exclusively on high-end luxury goods.
+ **Note:** This is a premium e-commerce platform inspired by Amazon but focused exclusively on high-end luxury goods.
 
-## 🚀 Features
-- 🛍️ Curated selection of luxury products from top brands worldwide
-- 🔍 Advanced search with AI-powered recommendations
-- 📱 Responsive design for flawless shopping on any device
-- 📦 White-glove delivery with personalized unboxing experience
+##  Features
+-  Curated selection of luxury products from top brands worldwide
+-  Advanced search with AI-powered recommendations
+-  Responsive design for flawless shopping on any device
+-  White-glove delivery with personalized unboxing experience
 
-## 🛠️ Technologies Used
+##  Technologies Used
 - **Frontend:** Html, javascript and css
 - **Backend:** not implemented yet
 
