@@ -1,12 +1,16 @@
-/* Global Styles */
-:root {
-    --gold: #D4AF37;
-    --dark-gold: #A67C00;
-    --black: #000000;
-    --white: #FFFFFF;
-    --gray: #1A1A1A;
-    --light-gray: #333333;
-    --text-gray: #CCCCCC;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éclat Couture | The Pinnacle of Luxury Fashion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Global Styles */
+            :root {
                 --primary: #5D4037;
                 --primary-light: #8D6E63;
                 --primary-dark: #3E2723;
@@ -19,1353 +23,7 @@
                 --gray: #424242;
                 --light-gray: #757575;
                 --text: #E0E0E0;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Cormorant Garamond', serif;
-    background-color: var(--black);
-    color: var(--white);
-    overflow-x: hidden;
-    line-height: 1.6;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 400;
-    letter-spacing: 1px;
-}
-
-p {
-    font-size: 1.1rem;
-    color: var(--text-gray);
-    line-height: 1.8;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-    transition: all 0.3s ease;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.btn {
-    display: inline-block;
-    padding: 12px 30px;
-    border: 1px solid var(--white);
-    color: var(--white);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    text-align: center;
-}
-
-.btn:hover {
-    background-color: var(--white);
-    color: var(--black);
-}
-
-.btn-gold {
-    background-color: var(--gold);
-    border-color: var(--gold);
-    color: var(--black);
-}
-
-.btn-gold:hover {
-    background-color: transparent;
-    color: var(--gold);
-}
-
-.btn-white {
-    background-color: var(--white);
-    border-color: var(--white);
-    color: var(--black);
-}
-
-.btn-white:hover {
-    background-color: transparent;
-    color: var(--white);
-}
-
-.section {
-    padding: 100px 5%;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.section-title h2 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 15px;
-}
-
-.section-title h2::after {
-    content: '';
-    position: absolute;
-    width: 80px;
-    height: 2px;
-    background-color: var(--gold);
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.section-title p {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Announcement Bar */
-.announcement-bar {
-    background-color: var(--gold);
-    color: var(--black);
-    padding: 10px 0;
-    text-align: center;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    overflow: hidden;
-}
-
-.marquee {
-    white-space: nowrap;
-    animation: marquee 30s linear infinite;
-}
-
-@keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
-
-/* Header */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
-    position: relative;
-    border-bottom: 1px solid var(--light-gray);
-}
-
-.logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    font-weight: 300;
-    letter-spacing: 5px;
-    color: var(--gold);
-}
-
-.nav-links {
-    display: flex;
-    gap: 50px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.nav-column {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.nav-column h4 {
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-    color: var(--white);
-    letter-spacing: 3px;
-}
-
-.nav-column a {
-    font-size: 0.9rem;
-    color: var(--text-gray);
-    letter-spacing: 1px;
-    position: relative;
-}
-
-.nav-column a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 1px;
-    bottom: -3px;
-    left: 0;
-    background-color: var(--gold);
-    transition: width 0.3s ease;
-}
-
-.nav-column a:hover {
-    color: var(--white);
-}
-
-.nav-column a:hover::after {
-    width: 100%;
-}
-
-.header-icons {
-    display: flex;
-    gap: 20px;
-}
-
-.header-icons a {
-    font-size: 1.1rem;
-    color: var(--white);
-    position: relative;
-}
-
-.cart-count {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    background-color: var(--gold);
-    color: var(--black);
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.6rem;
-    font-family: Arial, sans-serif;
-}
-
-.search-bar {
-    position: absolute;
-    top: 100%;
-    right: 5%;
-    width: 300px;
-    background-color: var(--black);
-    border: 1px solid var(--light-gray);
-    padding: 10px;
-    display: none;
-    z-index: 100;
-}
-
-.search-bar input {
-    width: 100%;
-    background: transparent;
-    border: none;
-    color: var(--white);
-    padding: 5px;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1rem;
-    outline: none;
-}
-
-.search-bar button {
-    background: transparent;
-    border: none;
-    color: var(--white);
-    cursor: pointer;
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    color: var(--white);
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-/* Hero Section */
-.hero {
-    height: 90vh;
-    background-image:  url('https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-slideshow {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.hero-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transition: opacity 1s ease;
-}
-
-.hero-slide.active {
-    opacity: 1;
-}
-
-.hero-slide::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-}
-
-.hero-content {
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    transform: translateY(-50%);
-    max-width: 600px;
-    z-index: 2;
-}
-
-.hero-content h1 {
-    font-size: 4rem;
-    margin-bottom: 20px;
-    line-height: 1.1;
-    font-weight: 300;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    max-width: 500px;
-}
-
-.hero-nav {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    z-index: 2;
-}
-
-.hero-dots {
-    display: flex;
-    gap: 10px;
-}
-
-.hero-dots .dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.hero-dots .dot.active {
-    background-color: var(--gold);
-    transform: scale(1.2);
-}
-
-.hero-prev, .hero-next {
-    background: none;
-    border: none;
-    color: var(--white);
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.hero-prev:hover, .hero-next:hover {
-    color: var(--gold);
-}
-
-/* Collections Grid */
-.collections-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.collection-card {
-    position: relative;
-    height: 500px;
-    overflow: hidden;
-}
-
-.collection-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.collection-card:hover img {
-    transform: scale(1.05);
-}
-
-.collection-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-}
-
-.collection-overlay h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    font-weight: 300;
-}
-
-.collection-overlay p {
-    font-size: 1rem;
-    margin-bottom: 20px;
-}
-
-.collection-actions {
-    display: flex;
-    gap: 15px;
-}
-
-/* Featured Products */
-.featured-products {
-    background-color: var(--gray);
-}
-
-.products-slider {
-    position: relative;
-    overflow: hidden;
-}
-
-.products-container {
-    display: flex;
-    transition: transform 0.5s ease;
-    gap: 30px;
-}
-
-.product-card {
-    min-width: calc(25% - 23px);
-    background-color: var(--black);
-    border: 1px solid var(--light-gray);
-    padding: 20px;
-    transition: all 0.3s ease;
-}
-
-.product-card:hover {
-    border-color: var(--gold);
-    transform: translateY(-10px);
-}
-
-.product-image {
-    height: 350px;
-    overflow: hidden;
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.product-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.product-card:hover .product-image img {
-    transform: scale(1.05);
-}
-
-.product-badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: var(--gold);
-    color: var(--black);
-    padding: 5px 10px;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-}
-
-.product-info h3 {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
-    font-weight: 300;
-}
-
-.product-info p {
-    font-size: 0.9rem;
-    margin-bottom: 15px;
-}
-
-.product-price {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.price {
-    font-size: 1.2rem;
-    color: var(--gold);
-}
-
-.slider-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-top: 40px;
-}
-
-.slider-dots {
-    display: flex;
-    gap: 10px;
-}
-
-.slider-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: var(--light-gray);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.slider-dot.active {
-    background-color: var(--gold);
-    transform: scale(1.2);
-}
-
-.slider-prev, .slider-next {
-    background: none;
-    border: none;
-    color: var(--white);
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.slider-prev:hover, .slider-next:hover {
-    color: var(--gold);
-}
-
-/* Couture Experience */
-.couture-experience {
-    display: flex;
-    min-height: 600px;
-}
-
-.couture-content {
-    flex: 1;
-    padding: 80px;
-    background-color: var(--gray);
-}
-
-.couture-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    font-weight: 300;
-}
-
-.couture-features {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin: 40px 0;
-}
-
-.feature {
-    text-align: center;
-}
-
-.feature i {
-    font-size: 2rem;
-    color: var(--gold);
-    margin-bottom: 15px;
-}
-
-.feature h4 {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-    font-weight: 300;
-}
-
-.feature p {
-    font-size: 0.9rem;
-}
-
-.couture-image {
-    flex: 1;
-    background-image: url('https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
-    background-size: cover;
-    background-position: center;
-}
-
-/* Testimonials */
-.testimonials {
-    background-color: var(--gray);
-}
-
-.testimonial-slider {
-    position: relative;
-    max-width: 1000px;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.testimonials-container {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.testimonial {
-    min-width: 100%;
-    padding: 0 20px;
-}
-
-.testimonial-text {
-    font-size: 1.5rem;
-    font-style: italic;
-    margin-bottom: 30px;
-    line-height: 1.8;
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.testimonial-text::before,
-.testimonial-text::after {
-    content: '"';
-    font-size: 3rem;
-    color: var(--gold);
-    opacity: 0.5;
-    position: absolute;
-}
-
-.testimonial-text::before {
-    top: -20px;
-    left: -30px;
-}
-
-.testimonial-text::after {
-    bottom: -50px;
-    right: -30px;
-}
-
-.testimonial-author {
-    font-size: 1.1rem;
-    color: var(--gold);
-    margin-bottom: 5px;
-}
-
-.testimonial-role {
-    font-size: 0.9rem;
-    color: var(--text-gray);
-}
-
-.testimonial-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-top: 40px;
-}
-
-.testimonial-dots {
-    display: flex;
-    gap: 10px;
-}
-
-.testimonial-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: var(--light-gray);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.testimonial-dot.active {
-    background-color: var(--gold);
-    transform: scale(1.2);
-}
-
-.testimonial-prev, .testimonial-next {
-    background: none;
-    border: none;
-    color: var(--white);
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.testimonial-prev:hover, .testimonial-next:hover {
-    color: var(--gold);
-}
-
-/* Newsletter */
-.newsletter {
-    padding: 100px 20%;
-    text-align: center;
-    background-color: var(--black);
-    border-top: 1px solid var(--light-gray);
-    border-bottom: 1px solid var(--light-gray);
-}
-
-.newsletter h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    font-weight: 300;
-}
-
-.newsletter p {
-    max-width: 600px;
-    margin: 0 auto 30px;
-}
-
-.newsletter-form {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.newsletter-form .form-group {
-    display: flex;
-}
-
-.newsletter-form input {
-    flex: 1;
-    padding: 15px;
-    background-color: transparent;
-    border: 1px solid var(--light-gray);
-    color: var(--white);
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1rem;
-    outline: none;
-}
-
-.newsletter-form input::placeholder {
-    color: #777;
-}
-
-.newsletter-form button {
-    padding: 0 30px;
-    background-color: var(--gold);
-    color: var(--black);
-    border: none;
-    font-size: 0.9rem;
-    letter-spacing: 2px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.newsletter-form button:hover {
-    background-color: var(--dark-gold);
-}
-
-.form-checkbox {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 15px;
-    justify-content: center;
-}
-
-.form-checkbox input {
-    width: auto;
-}
-
-.form-checkbox label {
-    font-size: 0.9rem;
-    color: var(--text-gray);
-}
-
-/* Flagship Locations */
-.flagship-locations {
-    padding: 100px 5%;
-}
-
-.locations-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-}
-
-.location-card {
-    border: 1px solid var(--light-gray);
-    transition: all 0.3s ease;
-}
-
-.location-card:hover {
-    border-color: var(--gold);
-    transform: translateY(-10px);
-}
-
-.location-image {
-    height: 250px;
-    background-size: cover;
-    background-position: center;
-}
-
-.location-info {
-    padding: 30px;
-    text-align: center;
-}
-
-.location-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    font-weight: 300;
-}
-
-.location-info p {
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-}
-
-/* Footer */
-.footer {
-    background-color: var(--black);
-    padding: 80px 5% 40px;
-}
-
-.footer-content {
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.footer-main {
-    display: flex;
-    gap: 80px;
-    margin-bottom: 60px;
-}
-
-.footer-logo {
-    flex: 1;
-}
-
-.footer-logo .logo {
-    margin-bottom: 15px;
-}
-
-.footer-logo p {
-    font-size: 0.9rem;
-    margin-bottom: 20px;
-}
-
-.social-links {
-    display: flex;
-    gap: 15px;
-}
-
-.social-links a {
-    color: var(--white);
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-    color: var(--gold);
-}
-
-.footer-links {
-    flex: 2;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-}
-
-.link-column {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.link-column h4 {
-    font-size: 1rem;
-    margin-bottom: 10px;
-    color: var(--gold);
-    letter-spacing: 2px;
-    font-weight: 300;
-}
-
-.link-column a {
-    font-size: 0.9rem;
-    color: var(--text-gray);
-    position: relative;
-}
-
-.link-column a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 1px;
-    bottom: -3px;
-    left: 0;
-    background-color: var(--gold);
-    transition: width 0.3s ease;
-}
-
-.link-column a:hover {
-    color: var(--white);
-}
-
-.link-column a:hover::after {
-    width: 100%;
-}
-
-.footer-newsletter {
-    max-width: 500px;
-    margin: 0 auto 60px;
-    text-align: center;
-}
-
-.footer-newsletter h4 {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    font-weight: 300;
-    letter-spacing: 2px;
-}
-
-.footer-newsletter-form {
-    display: flex;
-    border: 1px solid var(--light-gray);
-}
-
-.footer-newsletter-form input {
-    flex: 1;
-    padding: 12px 15px;
-    background: transparent;
-    border: none;
-    color: var(--white);
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1rem;
-    outline: none;
-}
-
-.footer-newsletter-form button {
-    background: transparent;
-    border: none;
-    color: var(--white);
-    padding: 0 20px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.footer-newsletter-form button:hover {
-    color: var(--gold);
-}
-
-.footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 40px;
-    border-top: 1px solid var(--light-gray);
-}
-
-.footer-bottom p {
-    font-size: 0.8rem;
-    color: var(--text-gray);
-}
-
-.payment-methods {
-    display: flex;
-    gap: 15px;
-}
-
-.payment-methods i {
-    font-size: 1.5rem;
-    color: var(--text-gray);
-}
-
-/* VIP Modal */
-.vip-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-}
-
-.vip-modal-content {
-    background-color: var(--black);
-    border: 1px solid var(--gold);
-    width: 100%;
-    max-width: 500px;
-    padding: 40px;
-    position: relative;
-}
-
-.close-vip {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 1.5rem;
-    color: var(--white);
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.close-vip:hover {
-    color: var(--gold);
-}
-
-.vip-modal h3 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    font-weight: 300;
-    text-align: center;
-}
-
-.vip-modal p {
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.vip-form .form-group {
-    margin-bottom: 20px;
-}
-
-.vip-form input {
-    width: 100%;
-    padding: 12px 15px;
-    background: transparent;
-    border: 1px solid var(--light-gray);
-    color: var(--white);
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1rem;
-    outline: none;
-}
-
-.vip-form input::placeholder {
-    color: #777;
-}
-
-.small-text {
-    font-size: 0.8rem;
-    color: var(--text-gray);
-    margin-top: 20px;
-    text-align: center;
-}
-
-/* Cart Sidebar */
-.cart-sidebar {
-    position: fixed;
-    top: 0;
-    right: -400px;
-    width: 400px;
-    height: 100%;
-    background-color: var(--black);
-    border-left: 1px solid var(--light-gray);
-    z-index: 1000;
-    transition: right 0.3s ease;
-    display: flex;
-    flex-direction: column;
-}
-
-.cart-sidebar.open {
-    right: 0;
-}
-
-.cart-header {
-    padding: 20px;
-    border-bottom: 1px solid var(--light-gray);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.cart-header h3 {
-    font-size: 1.2rem;
-    font-weight: 300;
-    letter-spacing: 2px;
-}
-
-.close-cart {
-    font-size: 1.5rem;
-    color: var(--white);
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.close-cart:hover {
-    color: var(--gold);
-}
-
-.cart-items {
-    flex: 1;
-    padding: 20px;
-    overflow-y: auto;
-}
-
-.cart-item {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid var(--light-gray);
-}
-
-.cart-item-image {
-    width: 80px;
-    height: 80px;
-}
-
-.cart-item-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.cart-item-details {
-    flex: 1;
-}
-
-.cart-item-title {
-    font-size: 0.9rem;
-    margin-bottom: 5px;
-}
-
-.cart-item-price {
-    font-size: 0.9rem;
-    color: var(--gold);
-    margin-bottom: 10px;
-}
-
-.cart-item-remove {
-    font-size: 0.8rem;
-    color: var(--text-gray);
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.cart-item-remove:hover {
-    color: var(--gold);
-}
-
-.cart-total {
-    padding: 20px;
-    border-top: 1px solid var(--light-gray);
-}
-
-.cart-total p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-}
-
-/* Responsive Styles */
-@media (max-width: 1400px) {
-    .collections-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .locations-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .product-card {
-        min-width: calc(33.333% - 20px);
-    }
-}
-
-@media (max-width: 1200px) {
-    .nav-links {
-        gap: 30px;
-    }
-    
-    .footer-links {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .couture-experience {
-        flex-direction: column;
-    }
-    
-    .couture-content {
-        padding: 60px;
-    }
-    
-    .couture-image {
-        min-height: 400px;
-    }
-    
-    .watch-highlight {
-        flex-direction: column;
-    }
-    
-    .watch-image {
-        width: 100%;
-    }
-}
-
-@media (max-width: 992px) {
-    .nav-links {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: var(--black);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 40px;
-        z-index: 999;
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-    }
-    
-    .nav-links.open {
-        transform: translateX(0);
-    }
-    
-    .nav-column {
-        text-align: center;
-    }
-    
-    .mobile-menu-btn {
-        display: block;
-        z-index: 1000;
-    }
-    
-    .header-icons {
-        z-index: 1000;
-    }
-    
-    .hero-content {
-        left: 5%;
-    }
-    
-    .hero-content h1 {
-        font-size: 3rem;
-    }
-    
-    .product-card {
-        min-width: calc(50% - 15px);
-    }
-    
-    .mens-categories {
-        grid-template-columns: 1fr;
-    }
-    
-    .footer-main {
-        flex-direction: column;
-        gap: 40px;
-    }
-    
-    .footer-links {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .section {
-        padding: 60px 5%;
-    }
-    
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-    
-    .collections-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .product-card {
-        min-width: 100%;
-    }
-    
-    .couture-features {
-        grid-template-columns: 1fr;
-    }
-    
-    .newsletter {
-        padding: 60px 5%;
-    }
-    
-    .footer-links {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .cart-sidebar {
-        width: 100%;
-    }
-}
-
-@media (max-width: 576px) {
-    .hero-content {
-        left: 5%;
-        right: 5%;
-    }
-    
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-    
-    .section-title h2 {
-        font-size: 2rem;
-    }
-    
-    .collection-actions {
-        flex-direction: column;
-    }
-    
-    .newsletter-form .form-group {
-        flex-direction: column;
-    }
-    
-    .newsletter-form button {
-        width: 100%;
-        margin-top: 10px;
-    }
-    
-    .footer-links {
-        grid-template-columns: 1fr;
-    }
-    
-    .footer-bottom {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 1s ease forwards;
-}
-
-.delay-1 { animation-delay: 0.2s; }
-.delay-2 { animation-delay: 0.4s; }
-.delay-3 { animation-delay: 0.6s; }
-.delay-4 { animation-delay: 0.8s; }
-.delay-5 { animation-delay: 1s; }
-
+            }
 
             * {
                 margin: 0;
@@ -2732,3 +1390,537 @@ img {
                 opacity: 0;
             }
         
+    </style>
+</head>
+<body>
+    
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        BY APPOINTMENT ONLY • PRIVATE SHOWINGS AVAILABLE IN OUR GLOBAL SALONS
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <a href="#" class="logo">ÉCLAT</a>
+        
+        <nav class="nav-links">
+            <a href="#">WOMEN</a>
+            <a href="#">MEN</a>
+            <a href="#">HAUTE COUTURE</a>
+            <a href="#">WORLD OF ÉCLAT</a>
+        </nav>
+        
+        <div class="header-icons">
+            <a href="#"><i class="fas fa-search"></i></a>
+            <a href="#"><i class="fas fa-user"></i></a>
+            <a href="#"><i class="fas fa-shopping-bag"></i><span class="cart-count">3</span></a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="fade-in">ELEGANCE REDEFINED</h1>
+            <p class="fade-in delay-1">The Spring/Summer 2023 collection presents a symphony of craftsmanship, where each piece tells a story of unparalleled luxury and timeless sophistication.</p>
+            <div class="hero-btns fade-in delay-2">
+                <a href="#" class="btn">DISCOVER MORE</a>
+                <a href="#" class="btn btn-accent">BOOK A PRIVATE VIEWING</a>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section class="section">
+        <div class="section-title">
+            <h2>CURATED COLLECTIONS</h2>
+            <p>Each Éclat collection is a testament to the art of fine craftsmanship, where tradition meets innovation in perfect harmony.</p>
+        </div>
+        
+        <div class="collections-grid">
+            <div class="collection-card fade-in">
+                <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80" alt="Spring Collection">
+                <div class="collection-overlay">
+                    <h3>Spring 2023</h3>
+                    <p>A celebration of renewal and vibrant energy through meticulously crafted silhouettes</p>
+                    <a href="#" class="btn btn-gold">VIEW COLLECTION</a>
+                </div>
+            </div>
+            
+            <div class="collection-card fade-in delay-1">
+                <img src="https://images.unsplash.com/photo-1554412933-514a83d2f3c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" alt="Haute Couture">
+                <div class="collection-overlay">
+                    <h3>Haute Couture</h3>
+                    <p>The pinnacle of craftsmanship and exclusivity, made to measure for the discerning client</p>
+                    <a href="#" class="btn btn-gold">VIEW COLLECTION</a>
+                </div>
+            </div>
+            
+            <div class="collection-card fade-in delay-2">
+                <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80" alt="Accessories">
+                <div class="collection-overlay">
+                    <h3>Signature Accessories</h3>
+                    <p>Finishing touches for the discerning individual, crafted with the same exacting standards</p>
+                    <a href="#" class="btn btn-gold">VIEW COLLECTION</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Featured Products -->
+    <section class="section featured-products">
+        <div class="section-title">
+            <h2>EDITOR'S SELECTION</h2>
+            <p>Curated pieces from our creative director</p>
+        </div>
+        
+        <div class="products-slider">
+            <div class="products-container" id="productsContainer">
+                <!-- Products will be loaded dynamically via JavaScript -->
+            </div>
+            
+            <div class="slider-nav">
+                <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-dots" id="sliderDots">
+                    <!-- Dots will be added dynamically -->
+                </div>
+                <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Couture Experience -->
+    <section class="couture-experience">
+        <div class="couture-content">
+            <h2>THE COUTURE EXPERIENCE</h2>
+            <p>Éclat Couture offers an unparalleled private shopping experience in our flagship boutiques. Our personal shoppers will guide you through the collection in a discreet, luxurious setting.</p>
+            <div class="couture-features">
+                <div class="feature">
+                    <i class="fas fa-calendar-check"></i>
+                    <h4>BY APPOINTMENT ONLY</h4>
+                    <p>Exclusive access to our private salons</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-cut"></i>
+                    <h4>BESPOKE ALTERATIONS</h4>
+                    <p>Tailored to your exact measurements</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-gem"></i>
+                    <h4>PRIVATE VIEWINGS</h4>
+                    <p>Early access to new collections</p>
+                </div>
+            </div>
+            <a href="#" class="btn btn-gold">REQUEST AN APPOINTMENT</a>
+        </div>
+        <div class="couture-image"></div>
+    </section>
+
+    <!-- Men's Luxury Section -->
+    <section class="mens-luxury">
+        <div class="mens-content">
+            <h2>FOR THE DISCERNING GENTLEMAN</h2>
+            <p>Éclat Couture presents an exclusive men's collection featuring bespoke tailoring, Swiss-made timepieces, and accessories crafted with the same attention to detail as our women's collections.</p>
+            
+            <div class="mens-categories">
+                <div class="category">
+                    <h4>BESPOKE TAILORING</h4>
+                    <p>Handcrafted suits starting from $12,000</p>
+                    <a href="#">Explore</a>
+                </div>
+                <div class="category">
+                    <h4>LIMITED TIMEPIECES</h4>
+                    <p>Swiss-made with rare complications</p>
+                    <a href="#">Explore</a>
+                </div>
+                <div class="category">
+                    <h4>LEATHER GOODS</h4>
+                    <p>Crafted from exotic hides</p>
+                    <a href="#">Explore</a>
+                </div>
+            </div>
+            
+            <div class="watch-highlight">
+                <div class="watch-image">
+                    <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1480&q=80" alt="Éclat Grand Complication">
+                </div>
+                <div class="watch-details">
+                    <h3>ÉCLAT GRAND COMPLICATION</h3>
+                    <p class="price">$285,000</p>
+                    <p>This exceptional timepiece features a perpetual calendar, minute repeater, and tourbillon, all hand-finished by our master watchmakers.</p>
+                    <div class="watch-features">
+                        <div class="feature">
+                            <i class="fas fa-clock"></i>
+                            <span>Manual Winding</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-gem"></i>
+                            <span>Platinum Case</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-eye"></i>
+                            <span>Sapphire Crystal</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-gold">INQUIRE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials">
+        <div class="section-title">
+            <h2>OUR DISTINGUISHED CLIENTS</h2>
+            <p>Hear from those who have experienced Éclat</p>
+        </div>
+        
+        <div class="testimonial-slider">
+            <div class="testimonials-container" id="testimonialsContainer">
+                <!-- Testimonials will be loaded dynamically -->
+            </div>
+            
+            <div class="testimonial-nav">
+                <button class="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="testimonial-dots" id="testimonialDots">
+                    <!-- Dots will be added dynamically -->
+                </div>
+                <button class="testimonial-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="newsletter-content">
+            <h2>JOIN OUR WORLD</h2>
+            <p>Subscribe to receive exclusive access to private sales, couture presentations, and the latest from our ateliers.</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <div class="form-group">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-gold">SUBSCRIBE</button>
+                </div>
+                <div class="form-checkbox">
+                    <input type="checkbox" id="vipOptIn" checked>
+                    <label for="vipOptIn">Also enroll me in the VIP program for exclusive benefits</label>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Flagship Locations -->
+    <section class="flagship-locations">
+        <div class="section-title">
+            <h2>OUR FLAGSHIP BOUTIQUES</h2>
+            <p>Experience Éclat in person at these exclusive locations</p>
+        </div>
+        
+        <div class="locations-grid">
+            <div class="location-card">
+                <div class="location-image" style="background-image: url('https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')"></div>
+                <div class="location-info">
+                    <h3>PARIS</h3>
+                    <p>18 Avenue Montaigne, 75008</p>
+                    <p>+33 1 53 67 08 08</p>
+                    <a href="#" class="btn btn-white">BOOK APPOINTMENT</a>
+                </div>
+            </div>
+            
+            <div class="location-card">
+                <div class="location-image" style="background-image: url('https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')"></div>
+                <div class="location-info">
+                    <h3>NEW YORK</h3>
+                    <p>724 Fifth Avenue, 10019</p>
+                    <p>+1 212 826 8080</p>
+                    <a href="#" class="btn btn-white">BOOK APPOINTMENT</a>
+                </div>
+            </div>
+            
+            <div class="location-card">
+                <div class="location-image" style="background-image: url('https://images.unsplash.com/photo-1533929736458-ca588d08c8be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80')"></div>
+                <div class="location-info">
+                    <h3>LONDON</h3>
+                    <p>160 New Bond Street, W1S 2UE</p>
+                    <p>+44 20 7493 8080</p>
+                    <a href="#" class="btn btn-white">BOOK APPOINTMENT</a>
+                </div>
+            </div>
+            
+            <div class="location-card">
+                <div class="location-image" style="background-image: url('https://images.unsplash.com/photo-1533107862482-0e6974b06ec4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1620&q=80')"></div>
+                <div class="location-info">
+                    <h3>TOKYO</h3>
+                    <p>5-5-8 Ginza, Chuo-ku, 104-0061</p>
+                    <p>+81 3 5568 8080</p>
+                    <a href="#" class="btn btn-white">BOOK APPOINTMENT</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-logo">
+                    <a href="index.html" class="logo">ÉCLAT</a>
+                    <p>Since 1892</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-weixin"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h4>SHOP</h4>
+                        <a href="#">Women</a>
+                        <a href="#">Men</a>
+                        <a href="#">Jewelry</a>
+                        <a href="#">Timepieces</a>
+                        <a href="#">Accessories</a>
+                        <a href="#">Couture</a>
+                    </div>
+                    
+                    <div class="link-column">
+                        <h4>SERVICES</h4>
+                        <a href="#">Personal Shopping</a>
+                        <a href="#">Bespoke Tailoring</a>
+                        <a href="#">Wedding Services</a>
+                        <a href="#">VIP Program</a>
+                        <a href="#">Repairs</a>
+                        <a href="#">Authentication</a>
+                    </div>
+                    
+                    <div class="link-column">
+                        <h4>ABOUT</h4>
+                        <a href="#">Our Heritage</a>
+                        <a href="#">Craftsmanship</a>
+                        <a href="#">Sustainability</a>
+                        <a href="#">Art Foundation</a>
+                        <a href="#">Press</a>
+                        <a href="#">Careers</a>
+                    </div>
+                    
+                    <div class="link-column">
+                        <h4>LEGAL</h4>
+                        <a href="#">Terms & Conditions</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Cookie Policy</a>
+                        <a href="#">Accessibility</a>
+                        <a href="#">Modern Slavery Act</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-newsletter">
+                <h4>STAY CONNECTED</h4>
+                <form class="footer-newsletter-form">
+                    <input type="email" placeholder="Email Address">
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2023 ÉCLAT COUTURE. ALL RIGHTS RESERVED.</p>
+            <div class="payment-methods">
+                <i class="fab fa-cc-amex"></i>
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+                <i class="fab fa-cc-paypal"></i>
+                <i class="fab fa-cc-jcb"></i>
+                <i class="fab fa-cc-discover"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- Couture Experience  stop here -->
+    <section class="couture-experience">
+        <div class="couture-content">
+            <h2 class="fade-in">THE ART OF HAUTE COUTURE</h2>
+            <p class="fade-in delay-1">Experience the rarefied world of Éclat Haute Couture, where each garment is a unique masterpiece crafted by our artisans in Paris. With over 800 hours of meticulous handwork in each piece, our atelier creates fewer than 50 couture garments per season, ensuring exclusivity of the highest order.</p>
+            <a href="#" class="btn fade-in delay-2">REQUEST A PRIVATE APPOINTMENT</a>
+        </div>
+    </section>
+
+    <!-- Back to Top -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+
+
+        // Preloader
+window.addEventListener('load', function() {
+    const preloader = document.querySelector('.preloader');
+    const container = document.querySelector('.container');
+    
+    // Simulate loading delay
+    setTimeout(() => {
+        preloader.style.opacity = '0';
+        preloader.style.visibility = 'hidden';
+        
+        container.classList.add('loaded');
+        
+        // Initialize animations after preloader hides
+        setTimeout(() => {
+            initAnimations();
+            initSwiper();
+        }, 500);
+    }, 2500);
+}); 
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            mobileMenuBtn.innerHTML = navLinks.style.display === 'flex' ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Product Slider
+        const productsContainer = document.querySelector('.products-container');
+        const productCards = document.querySelectorAll('.product-card');
+        const productDots = document.querySelectorAll('.products-slider .slider-dot');
+        let currentProductIndex = 0;
+        let productInterval;
+        
+        function updateProductSlider() {
+            const cardWidth = productCards[0].offsetWidth + 40; // including gap
+            const offset = -currentProductIndex * cardWidth;
+            productsContainer.style.transform = `translateX(${offset}px)`;
+            
+            productDots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentProductIndex);
+            });
+        }
+        
+        function startProductSlider() {
+            productInterval = setInterval(() => {
+                currentProductIndex = (currentProductIndex + 1) % productDots.length;
+                updateProductSlider();
+            }, 5000);
+        }
+        
+        productDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                clearInterval(productInterval);
+                currentProductIndex = index;
+                updateProductSlider();
+                startProductSlider();
+            });
+        });
+        
+        startProductSlider();
+        
+        // Testimonial Slider
+        const testimonialsContainer = document.querySelector('.testimonials-container');
+        const testimonialSlides = document.querySelectorAll('.testimonial');
+        const testimonialDots = document.querySelectorAll('.testimonial-nav .slider-dot');
+        let currentTestimonialIndex = 0;
+        let testimonialInterval;
+        
+        function updateTestimonialSlider() {
+            const offset = -currentTestimonialIndex * 100;
+            testimonialsContainer.style.transform = `translateX(${offset}%)`;
+            
+            testimonialDots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentTestimonialIndex);
+            });
+        }
+        
+        function startTestimonialSlider() {
+            testimonialInterval = setInterval(() => {
+                currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonialDots.length;
+                updateTestimonialSlider();
+            }, 7000);
+        }
+        
+        testimonialDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                clearInterval(testimonialInterval);
+                currentTestimonialIndex = index;
+                updateTestimonialSlider();
+                startTestimonialSlider();
+            });
+        });
+        
+        startTestimonialSlider();
+        
+        // Scroll animations
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        function checkScroll() {
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementTop < windowHeight - 100) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+        
+        // Back to Top Button
+        const backToTopBtn = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+            
+            checkScroll();
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Scroll Down Button
+        const scrollDownBtn = document.querySelector('.scroll-down');
+        
+        scrollDownBtn.addEventListener('click', () => {
+            document.querySelector('.section').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+        
+        // Page Load Animation
+        document.body.classList.add('loaded');
+        
+        // Initialize animations on load
+        window.addEventListener('load', () => {
+            checkScroll();
+        });
+    </script>
+</body>
+</html>

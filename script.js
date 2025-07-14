@@ -8,6 +8,26 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileMenuBtn.innerHTML = navLinks.classList.contains('open') ? 
             '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
     });
+
+    // Preloader
+        window.addEventListener('load', function() {
+            const preloader = document.querySelector('.preloader');
+            const container = document.querySelector('.container');
+            
+            // Simulate loading delay
+            setTimeout(() => {
+                preloader.style.opacity = '0';
+                preloader.style.visibility = 'hidden';
+                
+                container.classList.add('loaded');
+                
+                // Initialize animations after preloader hides
+                setTimeout(() => {
+                    initAnimations();
+                    initSwiper();
+                }, 500);
+            }, 2500);
+        });
     
     // Search Toggle
     const searchBtn = document.getElementById('searchBtn');
